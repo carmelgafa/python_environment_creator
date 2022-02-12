@@ -35,7 +35,7 @@ def create_environment(project_name:str, requirements:list)->None:
 
     # run activate.bat
     os.system('''
-              activate.bat & pip install -r requirements.txt
+              activate.bat & pip install -r requirements.txt & pip install -e .
               ''')
 
     # create gitignore file and add venv folder
