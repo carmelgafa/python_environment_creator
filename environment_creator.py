@@ -42,8 +42,5 @@ def create_environment(project_name:str, requirements:list)->None:
     with open(".gitignore", "w") as f:
         f.write("venv\n")
 
-if __name__ == "__main__":  
-
-
 if __name__ == '__main__':
     create_environment('testproject', ['numpy', 'pandas'])
