@@ -28,10 +28,12 @@ def create_environment(project_name:str, requirements:list)->None:
     # create activate.bat
     with open("activate.bat", "w") as f:
         f.write("venv\\Scripts\\activate.bat\n")
-
+        f.close()
+        
     # create deactivate.bat
     with open("deactivate.bat", "w") as f:
         f.write("venv\\Scripts\\deactivate.bat\n")
+        f.close()
 
     # run activate.bat
     os.system('''
@@ -40,7 +42,7 @@ def create_environment(project_name:str, requirements:list)->None:
 
     # create gitignore file and add venv folder
     with open(".gitignore", "w") as f:
-        f.write("venv\n")
+        f.write("\\venv\n")
 
 if __name__ == '__main__':
     create_environment('testproject', ['numpy', 'pandas'])
